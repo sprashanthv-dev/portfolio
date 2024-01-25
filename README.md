@@ -1,2 +1,2 @@
-# portfolio
+## Prashanth Srinivasan
 Portfolio Website documenting my journey in the tech landscape - Education, Projects, Industry Experience, Blogs and much more ...
