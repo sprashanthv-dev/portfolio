@@ -1,0 +1,60 @@
+{
+  "name": "nextjs-boilerplate-simple",
+  "version": "1.0.0",
+  "author": "Bruno Bernardino <me@brunobernardino.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoBernardino/nextjs-boilerplate-simple.git"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "test": "jest --testTimeout=5000",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx .",
+    "pretty": "prettier --write '*.{js,jsx,ts,tsx,json,scss}' '**/*.{js,jsx,ts,tsx,json,scss}'",
+    "pretty/test": "prettier --check '*.{js,jsx,ts,tsx,json,scss}' '**/*.{js,jsx,ts,tsx,json,scss}'"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "4.32.0",
+    "axios": "1.6.0",
+    "dotenv": "16.3.1",
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-helmet": "6.1.0",
+    "react-vertical-timeline-component": "3.6.0",
+    "sass": "1.69.5",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.6",
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "@types/react-helmet": "6.1.8",
+    "@types/styled-components": "5.1.29",
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "eslint": "8.52.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "expect": "29.7.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "prettier": "3.0.3",
+    "react-test-renderer": "18.2.0"
+  }
+}

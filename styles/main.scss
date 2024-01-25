@@ -1,0 +1,15 @@
+@import '__base.scss';
+@import 'theme';
+
+.main {
+  &__section {
+    display: flex;
+    margin: 2rem auto;
+    //padding-bottom: 2rem;
+
+    @media #{$medium-screen} {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "_variables";
+
+.mode__dark {
+  background: $dark-color-background;
+  color: $dark-color-text;
+}
+
+.mode__light {
+  background: $light-color-background;
+  color: black;
+}
