@@ -1,26 +1,4 @@
-@import "styles/_variables";
-
-.profile_photo {
-  img {
-    width: 192px;
-    height: 192px;
-  }
-
-  @media #{$medium-screen} {
-    margin: 1.25rem 0 0 0;
-    img {
-      width: 128px;
-      height: 128px;
-    }
-  }
-
-  @media #{$small-screen} {
-    img {
-      width: 64px;
-      height: 64px;
-    }
-  }
-}
+@import 'styles/_variables';
 
 .profile_summary {
   padding: 0.5rem;

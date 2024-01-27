@@ -20,7 +20,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <QueryClientProvider client={queryClient}>
-        <section className="main__section">
+        <section className="my-8 mx-auto">
           <Profile />
         </section>
         <section className="work_ex">
