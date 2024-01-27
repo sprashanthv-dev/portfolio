@@ -2,14 +2,12 @@ import React from 'react';
 
 import { githubUrl } from 'lib/constants';
 
-import styles from './Footer.module.scss';
-
 const Footer = () => {
   return (
-    <footer className={styles.Footer}>
-      <nav className={styles.Footer__nav}>
-        <ul className={styles.Footer__nav__items}>
-          <li className={styles.Footer__nav__item}>
+    <footer className="text-center bg-footer-bg mt-auto">
+      <nav>
+        <ul className="my-2 mx-auto">
+          <li className="md:text-2xl text-xl">
             Created with 💖 by <a href={githubUrl}>sprashanthv</a>
           </li>
         </ul>
