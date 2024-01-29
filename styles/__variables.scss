@@ -1,58 +1,12 @@
-$color-text: #dbe2ef;
-$color-purple: #3c1143;
-$color-pink: #c25178;
-$color-white: #ffffff;
-$color-black: #000000;
-$color-text-gray: #555555;
-$color-border-gray: #999999;
-$color-red: #bc3232;
-$color-red-darker: #a02200;
-$color-link: $color-text;
-$color-link-hover: $color-pink;
-
-$break-xsmall: 370px;
 $break-small: 600px;
 $break-medium: 820px;
-
-$max-width: 900px;
 
 $small-screen: 'only screen and (max-width : #{$break-small})';
 $medium-screen: 'only screen and (max-width : #{$break-medium})';
 
-$footer-background: #8D7B68;
-
 /* Dark Mode settings */
 $dark-color-background: #212121;
-$dark-color-text: #DFD7BF;
+$dark-color-text: #dfd7bf;
 
 /* Light Mode settings */
-$light-color-background: #F0EBE3;
-
-@mixin flex {
-  display: flex;
-  flex: 1;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-spaced {
-  @include flex;
-  justify-content: space-between;
-}
-
-@mixin flex-end {
-  @include flex;
-  align-items: flex-end;
-}
-
-@mixin flex-start {
-  @include flex;
-  align-items: flex-start;
-}
-
-@mixin flex-spaced-start {
-  @include flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+$light-color-background: #f0ebe3;

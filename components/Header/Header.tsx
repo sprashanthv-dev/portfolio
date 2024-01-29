@@ -3,6 +3,7 @@ import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  
   return (
     <header>
       {theme.type}
