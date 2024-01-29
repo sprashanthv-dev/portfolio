@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'footer-bg': '#8d7b68',
+        'navbar-text': '#643843',
+        'navbar-hover': '#85586F',
       },
     },
   },
