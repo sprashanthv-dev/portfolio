@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="text-center bg-footer-bg mt-auto">
       <nav>
         <ul className="my-2 mx-auto">
-          <li className="md:text-2xl text-xl">
+          <li className="md:text-2xl text-xl text-lighter-text">
             Created with 💖 by <a href={githubUrl}>sprashanthv</a>
           </li>
         </ul>

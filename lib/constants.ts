@@ -7,3 +7,26 @@ export const seoConfig = {
   defaultKeywords:
     'Prashanth, Prashanth Srinivasan, CU Boulder, Software Engineer',
 };
+
+export const navbarItems = [
+  {
+    id: '1',
+    title: 'About',
+  },
+  {
+    id: '2',
+    title: 'Experience',
+  },
+  {
+    id: '3',
+    title: 'Education',
+  },
+  {
+    id: '4',
+    title: 'Projects',
+  },
+  {
+    id: '5',
+    title: 'Interests',
+  },
+];

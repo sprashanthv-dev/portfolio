@@ -1,35 +1,49 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 
+import { navbarItems } from '../../lib/constants';
+
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
 
-  {
-    theme.type;
-  }
-  <button onClick={toggleTheme}>Toggle Theme</button>;
-
   return (
-    <nav className="flex justify-between items-center mt-5">
-      <ul className="md:text-xl lg:text-2xl cursor-pointer">
-        <li>Prashanth Srinivasan</li>
-      </ul>
-      <ul className="flex items-center space-x-6 md:text-base lg:text-xl cursor-pointer">
-        <li>About</li>
-        <li>Experience</li>
-        <li>Education</li>
-        <li>Projects</li>
-        <li>Interests</li>
-        <li>
-          <img
-            src={theme.type == 'light' ? 'images/light.svg' : 'images/dark.svg'}
-            alt="Theme Mode Icon"
-            className={theme.type == 'dark' ? 'invert' : 'invert-0'}
-            onClick={toggleTheme}
-          />
-        </li>
-      </ul>
-    </nav>
+    <div className="flex items-center justify-between mt-5 w-full">
+      <nav className="flex justify-between items-center md:w-4/5 w-5/5">
+        <ul className="text-2xl md:w-2/4 md:text-lg lg:text-xl">
+          <li>Prashanth Srinivasan</li>
+        </ul>
+        <ul className="hidden items-center space-x-6 cursor-pointer md:w-3/4 lg:text-xl md:flex">
+          {navbarItems.map((item) => (
+            <li
+              key={item.id}
+              className="hover:underline underline-offset-8 decoration-4 "
+            >
+              {item.title}
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="flex w-1/5 justify-evenly items-center">
+        {/* Theme Switcher Starts */}
+        <img
+          src={theme.type == 'light' ? 'images/light.svg' : 'images/dark.svg'}
+          alt="Theme Mode Icon"
+          className={`cursor-pointer ${
+            theme.type == 'dark' ? 'invert' : 'invert-0'
+          }`}
+          onClick={toggleTheme}
+        />
+        {/* Theme Switcher Ends */}
+
+        {/* Hamburger Menu Starts*/}
+        <img
+          className="md:hidden"
+          src="images/menu.svg"
+          alt="Hamburger Menu Icon"
+        />
+        {/* Hamburger Menu Ends*/}
+      </div>
+    </div>
   );
 };
 
