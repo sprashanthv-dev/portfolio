@@ -1,10 +1,18 @@
-import React from 'react';
-import { useTheme } from '../../context/ThemeContext';
+import React, { useState } from 'react';
 
+import { useTheme } from '../../context/ThemeContext';
 import { navbarItems } from '../../lib/constants';
+import useResizer from 'hooks/useResizer';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
+  const [closeIcon, setCloseIcon] = useState(false);
+
+  const isResized = useResizer();
+
+  const toggleCloseIcon = () => {
+    setCloseIcon(!closeIcon);
+  };
 
   return (
     <div className="flex items-center justify-between mt-5 w-full">
@@ -36,11 +44,23 @@ const Navbar = () => {
         {/* Theme Switcher Ends */}
 
         {/* Hamburger Menu Starts*/}
-        <img
-          className="md:hidden"
-          src="images/menu.svg"
-          alt="Hamburger Menu Icon"
-        />
+        {isResized ? (
+          closeIcon ? (
+            <img
+              src="images/close.svg"
+              alt="Close Menu Icon"
+              onClick={toggleCloseIcon}
+            />
+          ) : (
+            <img
+              src="images/menu.svg"
+              alt="Hamburger Menu Icon"
+              onClick={toggleCloseIcon}
+            />
+          )
+        ) : (
+          ''
+        )}
         {/* Hamburger Menu Ends*/}
       </div>
     </div>
