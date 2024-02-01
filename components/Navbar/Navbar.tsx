@@ -8,7 +8,7 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [closeIcon, setCloseIcon] = useState(false);
 
-  const isResized = useResizer();
+  const isResized = useResizer(768);
 
   const toggleCloseIcon = () => {
     setCloseIcon(!closeIcon);
@@ -16,19 +16,20 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between mt-5 w-full">
-      <nav className="flex justify-between items-center md:w-4/5 w-5/5">
+      <nav className="flex flex-col justify-center w-5/5 items-center md:w-4/5 md:flex-row md:justify-between">
         <ul className="text-2xl md:w-2/4 md:text-lg lg:text-xl">
           <li>Prashanth Srinivasan</li>
         </ul>
-        <ul className="hidden items-center space-x-6 cursor-pointer md:w-3/4 lg:text-xl md:flex">
-          {navbarItems.map((item) => (
-            <li
-              key={item.id}
-              className="hover:underline underline-offset-8 decoration-4 "
-            >
-              {item.title}
-            </li>
-          ))}
+        <ul className="flex flex-col items-center space-x-6 cursor-pointer mt-2 md:m-0 md:w-3/4 md:flex-row lg:text-xl">
+          {(!isResized || closeIcon) &&
+            navbarItems.map((item) => (
+              <li
+                key={item.id}
+                className="hover:underline underline-offset-8 decoration-4 "
+              >
+                {item.title}
+              </li>
+            ))}
         </ul>
       </nav>
       <div className="flex w-1/5 justify-evenly items-center">

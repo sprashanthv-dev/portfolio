@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
-// TODO: On initial load if screen size is <= 768, the hamburger menu doesn't show up
-const useResizer = () => {
+const useResizer = (width: number) => {
   const [isResized, setIsResized] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= width) {
       setIsResized(true);
     } else {
       setIsResized(false);
