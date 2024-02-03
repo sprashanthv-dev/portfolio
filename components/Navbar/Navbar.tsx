@@ -16,10 +16,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between mt-5 w-full">
-      <nav className="flex flex-col justify-center items-center w-4/5 md:flex-row md:justify-between">
-        <ul className="text-2xl md:w-2/4 md:text-xl">
-          <li>Prashanth Srinivasan</li>
-        </ul>
+      <nav className="flex flex-col justify-center md:justify-between items-center w-4/5 md:flex-row">
         <ul className="flex flex-col text-center items-center md:space-x-4 cursor-pointer mt-2 md:m-0 md:w-3/4 md:flex-row lg:text-xl">
           {(!isResized || closeIcon) &&
             navbarItems.map((item) => (
