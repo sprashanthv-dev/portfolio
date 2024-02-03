@@ -1,4 +1,4 @@
-@import "_variables";
+@import '_variables';
 
 .mode__dark {
   background: $dark-color-background;
@@ -7,5 +7,5 @@
 
 .mode__light {
   background: $light-color-background;
-  color: black;
+  color: $maroon-color-text;
 }
