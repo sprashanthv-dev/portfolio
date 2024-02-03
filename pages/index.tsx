@@ -2,7 +2,7 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import Layout from 'components/Layout';
-import Profile from '../components/Profile/Profile';
+import Intro from '../components/Intro/Intro';
 import WorkEx from '../components/WorkEx/WorkEx';
 import Education from '../components/Education/Education';
 
@@ -21,7 +21,7 @@ const IndexPage = () => {
     <Layout>
       <QueryClientProvider client={queryClient}>
         <section className="my-8 mx-auto">
-          <Profile />
+          <Intro />
         </section>
         <section className="work_ex">
           <WorkEx />
