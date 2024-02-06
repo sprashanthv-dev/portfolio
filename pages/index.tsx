@@ -22,7 +22,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <QueryClientProvider client={queryClient}>
-        <section className="my-8 mx-auto">
+        <section className="my-4 md:my-0 mx-auto">
           <Intro />
         </section>
         <section>

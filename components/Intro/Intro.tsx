@@ -1,6 +1,12 @@
 import React from 'react';
 
+import { useTheme } from 'context/ThemeContext';
+
+import { socialIcons } from 'lib/constants';
+
 const Profile = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="py-2 md:py-14">
       <p className="text-center my-3 md:text-xl md:text-left">
@@ -18,10 +24,27 @@ const Profile = () => {
         focus on Cloud Computing and Software Systems at the University of
         Colorado, Boulder.
       </p>
-      <div className="flex">
-        <button className="border-solid border-2 p-4 rounded border-navbar-hover hover:bg-navbar-text hover:text-white">
-          Contact me
+      <div className="flex items-center justify-between md:justify-start">
+        <button className="md:text-xl border-solid border-2 p-2 md:p-4 rounded border-navbar-hover hover:bg-navbar-text hover:text-white">
+          Contact Me
         </button>
+        <div className="flex mx-2 md:mx-4">
+          {socialIcons.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className="mx-2 md:mx-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={item.title}
+            >
+              <img
+                src={`images/${item.label}_${theme.type}.svg`}
+                alt={`${item.label} icon`}
+              />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

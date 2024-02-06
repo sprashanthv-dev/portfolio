@@ -34,8 +34,12 @@ const About = () => {
           <p className="text-justify">
             I am always looking forward towards new challenges and opportunities
             to learn and grow as a software engineer. Please feel free to
-            contact me using the <strong>contact form</strong> below for any
-            work-related opportunities.
+            contact me using the{' '}
+            {/*TODO: Add navigation to actual contact form */}
+            <a href="" className="hover:underline">
+              <strong>contact form </strong>
+            </a>
+            below for any work-related opportunities.
           </p>
         </div>
       </div>
