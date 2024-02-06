@@ -30,3 +30,24 @@ export const navbarItems = [
     title: 'Interests',
   },
 ];
+
+export const socialIcons = [
+  {
+    id: '1',
+    label: 'linkedin',
+    link: 'https://www.linkedin.com/in/prashanthvamanan',
+    title: 'LinkedIn',
+  },
+  {
+    id: '2',
+    label: 'github',
+    link: 'https://github.com/sprashanthv-dev',
+    title: 'GitHub',
+  },
+  {
+    id: '3',
+    label: 'mail',
+    link: 'mailto:sprashanthv.dev@gmail.com',
+    title: 'Mail',
+  },
+];

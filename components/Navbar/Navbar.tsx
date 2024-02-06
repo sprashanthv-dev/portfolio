@@ -15,9 +15,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between mt-5 w-full">
+    <div className="flex items-center justify-between mt-8 w-full">
       <nav className="flex flex-col justify-center md:justify-between items-center w-4/5 md:flex-row">
-        <ul className="flex flex-col text-center items-center md:space-x-4 cursor-pointer mt-2 md:m-0 md:w-3/4 md:flex-row lg:text-xl">
+        <ul className="flex flex-col text-center items-center md:justify-between cursor-pointer mt-2 md:m-0 md:w-3/4 md:flex-row lg:text-xl">
           {(!isResized || closeIcon) &&
             navbarItems.map((item) => (
               <li
@@ -32,11 +32,9 @@ const Navbar = () => {
       <div className="flex w-1/5 justify-evenly items-center m-0">
         {/* Theme Switcher Starts */}
         <img
-          src={theme.type == 'light' ? 'images/light.svg' : 'images/dark.svg'}
+          src={`images/${theme.type}_mode.svg`}
           alt="Theme Mode Icon"
-          className={`cursor-pointer ${
-            theme.type == 'dark' ? 'invert' : 'invert-0'
-          }`}
+          className="cursor-pointer"
           onClick={toggleTheme}
         />
         {/* Theme Switcher Ends */}
@@ -45,13 +43,13 @@ const Navbar = () => {
         {isResized ? (
           closeIcon ? (
             <img
-              src="images/close.svg"
+              src={`images/close_${theme.type}.svg`}
               alt="Close Menu Icon"
               onClick={toggleCloseIcon}
             />
           ) : (
             <img
-              src="images/menu.svg"
+              src={`images/menu_${theme.type}.svg`}
               alt="Hamburger Menu Icon"
               onClick={toggleCloseIcon}
             />

@@ -1,18 +1,51 @@
 import React from 'react';
 
+import { useTheme } from 'context/ThemeContext';
+
+import { socialIcons } from 'lib/constants';
+
 const Profile = () => {
+  const { theme } = useTheme();
+
   return (
-    <div>
-      <p className="my-3 text-center md:text-xl">Hi, Nice to meet you! I am</p>
-      <p className="text-2xl text-center md:text-5xl m-0">
+    <div className="py-2 md:py-14">
+      <p className="text-center my-3 md:text-xl md:text-left">
+        Hi, Nice to meet you! I am
+      </p>
+      <p className="text-3xl text-center md:text-6xl md:text-left">
         Prashanth Srinivasan.
       </p>
-      <p className="my-4 md:text-xl text-justify">
+      <p className="my-4 md:text-2xl text-justify">
         I am a full-stack engineer by trade, specializing in crafting clean,
-        accessible and highly-performant web applications. Currently, I am
-        pursuing a Master's degree in Computer Science with a focus on Cloud
-        Computing and Software Systems at the University of Colorado, Boulder.
+        accessible and highly-performant web applications.
       </p>
+      <p className="my-6 md:text-2xl text-justify">
+        Currently, I am pursuing a Master's degree in Computer Science with a
+        focus on Cloud Computing and Software Systems at the University of
+        Colorado, Boulder.
+      </p>
+      <div className="flex items-center justify-between md:justify-start">
+        <button className="md:text-xl border-solid border-2 p-2 md:p-4 rounded border-navbar-hover hover:bg-navbar-text hover:text-white">
+          Contact Me
+        </button>
+        <div className="flex mx-2 md:mx-4">
+          {socialIcons.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className="mx-2 md:mx-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={item.title}
+            >
+              <img
+                src={`images/${item.label}_${theme.type}.svg`}
+                alt={`${item.label} icon`}
+              />
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
