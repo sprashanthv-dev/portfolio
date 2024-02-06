@@ -1,14 +1,14 @@
 const About = () => {
   return (
     <div>
-      <p className="text-center text-xl underline underline-offset-4 decoration-2 md:text-2xl">
+      <p className="text-xl text-center md:text-left md:text-2xl border-b-4 border-solid border-navbar-hover">
         About
       </p>
-      <div className="flex flex-col lg:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row">
         <img
-          src="images/me_4.jpg"
+          src="images/me.jpeg"
           alt="Photo of me"
-          className="rounded-full mt-6 p-0 md:p-6 w-48 md:w-72"
+          className="rounded-full mt-4 self-center w-48 md:w-72 md:mx-6"
         />
         <div className="about my-5 md:text-xl">
           <p className="text-justify mb-3">
@@ -33,12 +33,9 @@ const About = () => {
           </p>
           <p className="text-justify">
             I am always looking forward towards new challenges and opportunities
-            to learn and grow as a software engineer. My past professional
-            experience, a strong understanding of computer science fundamentals,
-            and the ability to adapt and thrive in fast-paced environments will
-            make me an ideal fit for software engineering roles. Please feel
-            free to contact me using the <strong>contact form</strong> below for
-            any work-related opportunities.
+            to learn and grow as a software engineer. Please feel free to
+            contact me using the <strong>contact form</strong> below for any
+            work-related opportunities.
           </p>
         </div>
       </div>
