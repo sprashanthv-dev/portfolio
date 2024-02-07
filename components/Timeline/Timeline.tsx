@@ -1,7 +1,7 @@
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+} from 'react-vertical-timeline-component'; //TODO: Add the types package for timeline component
 import 'react-vertical-timeline-component/style.min.css';
 
 import { TimelineItem, TimelineParentConfig } from '../../interfaces';
@@ -19,11 +19,10 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
   const { animate, layout, lineColor, className } = attrs;
   const { data, uiConfig } = config;
 
-  // TODO: Having only two config's only now (even, odd), can be extended if needed later
-  const evenIdxConfig = uiConfig[0];
-  const oddIdxConfig = uiConfig[1];
+  // TODO: Future enhancement - ui config can accept array of configuration
+  // TODO: styles, one for each timeline element
+  const timelineItemConfig = uiConfig[0];
 
-  // TODO: Refactor the even / odd logic into a separate function instead of repetition
   return (
     <VerticalTimeline
       animate={animate}
@@ -31,25 +30,13 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
       lineColor={lineColor}
       className={className}
     >
-      {data.map((item, index) => (
+      {data.map((item) => (
         <VerticalTimelineElement
           key={item.id}
-          className={
-            index % 2 === 0 ? evenIdxConfig.className : oddIdxConfig.className
-          }
-          contentStyle={
-            index % 2 === 0
-              ? evenIdxConfig.contentStyle
-              : oddIdxConfig.contentStyle
-          }
-          contentArrowStyle={
-            index % 2 === 0
-              ? evenIdxConfig.contentArrowStyle
-              : oddIdxConfig.contentArrowStyle
-          }
-          iconStyle={
-            index % 2 === 0 ? evenIdxConfig.iconStyle : oddIdxConfig.iconStyle
-          }
+          className={timelineItemConfig.className}
+          contentStyle={timelineItemConfig.contentStyle}
+          contentArrowStyle={timelineItemConfig.contentArrowStyle}
+          iconStyle={timelineItemConfig.iconStyle}
           date={item.period}
         >
           <h3 className="vertical-timeline-element-title">{item.title}</h3>

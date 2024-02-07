@@ -2,29 +2,15 @@
   {
     "className": "vertical-timeline-element--work",
     "contentStyle": {
-      "backgroundColor": "#607274",
-      "color": "#FFFBF5"
+      "backgroundColor": "#643843",
+      "color": "#fff3cf"
     },
     "contentArrowStyle": {
-      "borderRight": "7px solid #607274"
+      "borderRight": "7px solid #643843"
     },
     "iconStyle": {
-      "backgroundColor": "#607274",
-      "color": "#FFFBF5"
-    }
-  },
-  {
-    "className": "vertical-timeline-element--work",
-    "contentStyle": {
-      "backgroundColor": "#0F2C59",
-      "color": "#EADBC8"
-    },
-    "contentArrowStyle": {
-      "borderRight": "7px solid #0F2C59"
-    },
-    "iconStyle": {
-      "backgroundColor": "#0F2C59",
-      "color": "#EADBC8"
+      "backgroundColor": "#85586f",
+      "color": "#fff3cf"
     }
   }
 ]
