@@ -25,43 +25,41 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
 
   // TODO: Refactor the even / odd logic into a separate function instead of repetition
   return (
-    <>
-      <VerticalTimeline
-        animate={animate}
-        layout={layout}
-        lineColor={lineColor}
-        className={className}
-      >
-        {data.map((item, index) => (
-          <VerticalTimelineElement
-            key={item.id}
-            className={
-              index % 2 === 0 ? evenIdxConfig.className : oddIdxConfig.className
-            }
-            contentStyle={
-              index % 2 === 0
-                ? evenIdxConfig.contentStyle
-                : oddIdxConfig.contentStyle
-            }
-            contentArrowStyle={
-              index % 2 === 0
-                ? evenIdxConfig.contentArrowStyle
-                : oddIdxConfig.contentArrowStyle
-            }
-            iconStyle={
-              index % 2 === 0 ? evenIdxConfig.iconStyle : oddIdxConfig.iconStyle
-            }
-            date={item.period}
-          >
-            <h3 className="vertical-timeline-element-title">{item.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {item.subtitle}
-            </h4>
-            <p>{item.description}</p>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
-    </>
+    <VerticalTimeline
+      animate={animate}
+      layout={layout}
+      lineColor={lineColor}
+      className={className}
+    >
+      {data.map((item, index) => (
+        <VerticalTimelineElement
+          key={item.id}
+          className={
+            index % 2 === 0 ? evenIdxConfig.className : oddIdxConfig.className
+          }
+          contentStyle={
+            index % 2 === 0
+              ? evenIdxConfig.contentStyle
+              : oddIdxConfig.contentStyle
+          }
+          contentArrowStyle={
+            index % 2 === 0
+              ? evenIdxConfig.contentArrowStyle
+              : oddIdxConfig.contentArrowStyle
+          }
+          iconStyle={
+            index % 2 === 0 ? evenIdxConfig.iconStyle : oddIdxConfig.iconStyle
+          }
+          date={item.period}
+        >
+          <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            {item.subtitle}
+          </h4>
+          <p>{item.description}</p>
+        </VerticalTimelineElement>
+      ))}
+    </VerticalTimeline>
   );
 };
 

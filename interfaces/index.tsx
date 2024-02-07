@@ -20,11 +20,11 @@ export interface LayoutProps {
 // TODO: Move this to separate types folder?
 export type StrObject = {
   [key: string]: string;
-}
+};
 
 // Reference: https://www.npmjs.com/package/react-vertical-timeline-component
 export interface TimelineParentConfig {
-  animate? : boolean;
+  animate?: boolean;
   className?: string;
   layout?: string;
   lineColor?: string;
@@ -32,14 +32,14 @@ export interface TimelineParentConfig {
 
 export type TimeLineUIConfig = {
   className?: string;
-  contentArrowStyle? : StrObject;
+  contentArrowStyle?: StrObject;
   contentStyle?: StrObject;
   date?: string;
   dateClassName?: string;
   icon?: string;
   iconClassName?: string;
   iconStyle?: string;
-}
+};
 
 export type TimelineFields = {
   id: string;
@@ -47,9 +47,9 @@ export type TimelineFields = {
   subtitle: string;
   description: string;
   period: string;
-}
+};
 
 export type TimelineItem = {
-  data: TimelineFields[],
-  uiConfig: TimeLineUIConfig[]
-}
+  data: TimelineFields[];
+  uiConfig: TimeLineUIConfig[];
+};

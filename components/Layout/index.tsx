@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { seoConfig } from 'lib/constants';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
-import { seoConfig } from 'lib/constants';
 import { LayoutProps } from '../../interfaces';
 
 const Layout = ({ children }: LayoutProps) => {

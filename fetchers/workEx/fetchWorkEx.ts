@@ -8,6 +8,6 @@ const fetchWorkEx = async () => {
   }
 
   return resource.json();
-}
+};
 
 export default fetchWorkEx;

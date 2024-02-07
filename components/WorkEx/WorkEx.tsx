@@ -1,6 +1,5 @@
-import Timeline from '../Timeline/Timeline';
-
 import { useQuery } from '@tanstack/react-query';
+import Timeline from '../Timeline/Timeline';
 
 import { TimeLineUIConfig, TimelineFields } from '../../interfaces';
 

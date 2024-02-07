@@ -6,6 +6,6 @@ const fetchEducationUIConfig = async () => {
   }
 
   return resource.json();
-}
+};
 
 export default fetchEducationUIConfig;

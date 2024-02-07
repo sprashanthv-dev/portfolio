@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import useResizer from 'hooks/useResizer';
 import { useTheme } from '../../context/ThemeContext';
 import { navbarItems } from '../../lib/constants';
-import useResizer from 'hooks/useResizer';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();

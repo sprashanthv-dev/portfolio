@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         rel="preload"
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,300;1,400&display=swap"
         as="font"
-      ></Link>
+      />
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>

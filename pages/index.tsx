@@ -2,8 +2,8 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import Layout from 'components/Layout';
-import Intro from '../components/Intro/Intro';
 import About from 'components/About/About';
+import Intro from '../components/Intro/Intro';
 
 import WorkEx from '../components/WorkEx/WorkEx';
 import Education from '../components/Education/Education';

@@ -5,6 +5,7 @@ const About = () => {
         About
       </p>
       <div className="flex flex-col md:flex-row">
+        {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
         <img
           src="images/me.jpeg"
           alt="Photo of me"

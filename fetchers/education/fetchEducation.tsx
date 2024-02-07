@@ -8,6 +8,6 @@ const fetchEducation = async () => {
   }
 
   return resource.json();
-}
+};
 
 export default fetchEducation;
