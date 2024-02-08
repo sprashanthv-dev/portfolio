@@ -38,7 +38,7 @@ export type TimeLineUIConfig = {
   dateClassName?: string;
   icon?: string;
   iconClassName?: string;
-  iconStyle?: string;
+  iconStyle?: object;
 };
 
 export type TimelineFields = {
