@@ -43,10 +43,12 @@ export type TimeLineUIConfig = {
 
 export type TimelineFields = {
   id: string;
-  title: string;
-  subtitle: string;
-  description: string;
+  position: string;
   period: string;
+  org: string;
+  location: string;
+  subtitle: string;
+  description: string[];
 };
 
 export type TimelineItem = {
