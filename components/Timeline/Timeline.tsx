@@ -23,8 +23,6 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
   // TODO: styles, one for each timeline element
   const timelineItemConfig = uiConfig[0];
 
-  console.log('Data ', data);
-
   return (
     <VerticalTimeline
       animate={animate}
@@ -33,31 +31,38 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
       className={className}
     >
       {data.map((item) => (
-        <VerticalTimelineElement
-          key={item.id}
-          className={timelineItemConfig.className}
-          contentStyle={timelineItemConfig.contentStyle}
-          contentArrowStyle={timelineItemConfig.contentArrowStyle}
-          iconStyle={timelineItemConfig.iconStyle}
-        >
-          <div className="flex flex-col items-center text-center m-4 md:m-2 md:text-xl md:flex-row md:justify-between md:text-left">
-            <span className="font-bold my-2 md:my-0">{item.position}</span>
-            <span>{item.period}</span>
-          </div>
-          <div className="flex flex-col items-center  m-4 md:m-2 md:text-xl md:flex-row md:justify-between">
+          <VerticalTimelineElement
+              key={item.id}
+              className={timelineItemConfig.className}
+              contentStyle={timelineItemConfig.contentStyle}
+              contentArrowStyle={timelineItemConfig.contentArrowStyle}
+              iconStyle={timelineItemConfig.iconStyle}
+          >
+            <div className="flex flex-col items-center text-center m-4 md:m-2 md:text-lg md:flex-row md:justify-between md:text-left">
+              <span className="font-bold my-2 md:my-0">{item.position}</span>
+              <span>{item.period}</span>
+            </div>
+            <div className="flex flex-col items-center  m-4 md:m-2 md:text-lg md:flex-row md:justify-between">
             <span className="font-bold my-2 text-center md:my-0 md:text-left">
               {item.org}
             </span>
-            <span>{item.location}</span>
-          </div>
-          <ul className="flex m-4 flex-col">
-            {item.description.map((elt, index) => (
-              <li key={index} className="list-disc text-justify my-2">
-                {elt}
-              </li>
-            ))}
-          </ul>
-        </VerticalTimelineElement>
+              <span>{item.location}</span>
+            </div>
+            <ul className="flex m-4 flex-col">
+              {item.description.map((elt, index) => (
+                  <li key={index} className="text-lg list-disc text-justify my-2">
+                    {elt}
+                  </li>
+              ))}
+            </ul>
+            <ul className="flex my-4 flex-wrap justify-center md:justify-normal">
+              {item.skills.map((skill, index) => (
+                  <li key={index} className="text-lg w mx-2 my-1 border-l-4 border-skills-bg">
+                    <span className="mx-1">{skill}</span>
+                  </li>
+              ))}
+            </ul>
+          </VerticalTimelineElement>
       ))}
     </VerticalTimeline>
   );

@@ -21,7 +21,7 @@ const Profile = () => {
       </p>
       <p className="my-6 md:text-2xl text-justify">
         Currently, I am pursuing a Master's degree in Computer Science with a
-        focus on Cloud Computing and Software Systems at the University of
+        focus on Software Systems and Cloud Computing at the University of
         Colorado, Boulder.
       </p>
       <div className="flex items-center justify-between md:justify-start">

@@ -49,6 +49,7 @@ export type TimelineFields = {
   location: string;
   subtitle: string;
   description: string[];
+  skills: string[];
 };
 
 export type TimelineItem = {
