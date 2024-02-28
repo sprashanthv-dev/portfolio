@@ -25,7 +25,10 @@ const Profile = () => {
         Colorado, Boulder.
       </p>
       <div className="flex items-center justify-between md:justify-start">
-        <button className="md:text-xl border-solid border-2 p-2 md:p-4 rounded border-navbar-hover hover:bg-navbar-text hover:text-white">
+        <button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded 
+        ${theme.type === 'light' ? 'border-light-mode-dark-color' : 'border-dark-mode-alt-color'}
+        ${theme.type === 'light' ? 'hover:bg-light-mode-dark-color' : 'hover:bg-dark-mode-light-bg'}
+        ${theme.type === 'light' ? 'hover:text-white' : 'hover:text-black'}`}>
           Contact Me
         </button>
         <div className="flex mx-2 md:mx-4">

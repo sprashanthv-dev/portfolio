@@ -15,11 +15,11 @@ export const navbarItems = [
   },
   {
     id: '2',
-    title: 'Experience',
+    title: 'Education',
   },
   {
     id: '3',
-    title: 'Education',
+    title: 'Experience',
   },
   {
     id: '4',

@@ -9,11 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'lighter-text': '#fff3cf',
-        'footer-bg': '#8d7b68',
-        'navbar-text': '#643843',
-        'navbar-hover': '#85586F',
-        'skills-bg': '#000B49'
+        'light-mode-light-color': '#fff3cf',
+        'light-mode-dark-color': '#643843',
+        'light-mode-alt-color': '#85586F',
+        'dark-mode-dark-text': '#1B262C',
+        'dark-mode-light-bg': '#e3caa5',
+        'dark-mode-alt-color': '#EADBC8'
       },
     },
   },

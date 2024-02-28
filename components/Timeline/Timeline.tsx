@@ -57,7 +57,7 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
             </ul>
             <ul className="flex my-4 flex-wrap justify-center md:justify-normal">
               {item.skills.map((skill, index) => (
-                  <li key={index} className="text-lg w mx-2 my-1 border-l-4 border-skills-bg">
+                  <li key={index} className="text-lg w mx-2 my-1 border-l-4 border-dark-mode-dark-text">
                     <span className="mx-1">{skill}</span>
                   </li>
               ))}

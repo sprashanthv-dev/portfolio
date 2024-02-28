@@ -1,7 +1,13 @@
+import {useTheme} from "../../context/ThemeContext";
+
 const Education = () => {
+
+    const { theme } = useTheme();
+
     return (
         <>
-            <p className="text-xl text-center mb-4 md:text-left md:text-2xl border-b-4 border-solid border-navbar-hover">
+            <p className={`text-xl text-center mb-4 md:text-left md:text-2xl border-b-4 border-solid
+            ${theme.type === 'light' ? 'border-light-mode-alt-color' : 'border-dark-mode-alt-color'}`}>
                Education
             </p>
             <div>
