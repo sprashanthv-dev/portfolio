@@ -6,6 +6,7 @@ import About from 'components/About/About';
 import Intro from '../components/Intro/Intro';
 
 import WorkEx from '../components/WorkEx/WorkEx';
+import Education from "../components/Education/Education";
 
 // TODO: Move this config to a separate file
 const queryClient = new QueryClient({
@@ -26,6 +27,9 @@ const IndexPage = () => {
         </section>
         <section>
           <About />
+        </section>
+        <section>
+          <Education />
         </section>
         <section className="work_ex">
           <WorkEx />
