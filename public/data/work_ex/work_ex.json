@@ -1,23 +1,40 @@
 [
   {
     "id": "1",
-    "title": "Software Engineer Internship",
-    "subtitle": "XYZ Boulder, United States",
-    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    "period": "May 2023 - Aug 2023"
+    "position": "Software Engineer Internship",
+    "period": "May 2023 - Aug 2023",
+    "org": "MatrixCare, Inc.",
+    "location": "Minnesota, United States",
+    "description": [
+      "Reduced the access time of customer identity provider information across all product verticals from months to days through a real-time metrics dashboard using React, TypeScript and Next.js.",
+      "Ensured the dashboard functionalities were in alignment with the technical specifications through rapid iteration, collaboration and continuous deployment with Azure DevOps and Kubernetes.",
+      "Optimized page response and load times by 30% leveraging React server components and server-side rendering."],
+    "skills": ["Next.js", "React.js", "TypeScript", "HTML", "Tailwind CSS", "Node.js", "Express.js", "MSSQL", "Redis", "Docker", "Kubernetes", "Azure DevOps"]
   },
   {
     "id": "2",
-    "title": "Software Engineer Research Internship",
-    "subtitle": "GHI Boulder, United States",
-    "description": "Eget nunc scelerisque viverra mauris in aliquam. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Vitae turpis massa sed elementum tempus egestas.",
-    "period": "Feb 2023 - Apr 2023"
+    "position": "Software Research Internship",
+    "period": "Feb 2023 - Apr 2023",
+    "org": "NASA Colorado Space Grant Consortium",
+    "location": "Boulder, United States",
+    "description": [
+      "Enabled communication between several custom Arduino Atmega328 microcontrollers to exchange lunar surface temperature and material composition data by implementing an RF subsystem utilizing SPI and I2C protocols.",
+      "Researched and implemented efficient error detection and correction techniques in C++, that minimized the transmission time and memory usage, thereby enhancing the reliability of the transmitted packets."
+    ],
+    "skills": ["Arduino", "C++", "RF", "I2C", "SPI", "Error Detection", "Error Correction"]
   },
   {
     "id": "3",
-    "title": "Full Stack Software Engineer",
-    "subtitle": "ABC Hyderabad, India",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "period": "June 2019 - June 2022"
+    "position": "Full Stack Software Engineer",
+    "period": "June 2019 - June 2022",
+    "org": "Vassar Labs",
+    "location": "Hyderabad, India",
+    "description": [
+      "Streamlined the supply chain operations of a leading US manufacturing firm by interfacing Angular UI components with a smart artificial intelligence powered platform. It reduced the order escalations leading to a 20% increase in operational efficiency.",
+      "Led a team of five people in revamping the legacy Identity and Access Management (IAM) system with custom Keycloak flows, OTP integration, captcha support, and two-factor authentication, leading to a 15% uptick in user engagement.",
+      "Designed and developed a table library using Angular that supported sorting, filtering, pagination, and reordering of rows and columns. It promoted code reusability and reduced future development efforts across all projects by 40%.",
+      "Provided granular access control for a single customer to manage users across multiple products through custom authorization rules and implementation of business services with Spring Boot and Angular."
+    ],
+    "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "Bootstrap", "AngularJS", "Angular", "Node.js", "Express.js", "Java", "Spring Boot", "Microservices", "MySQL", "PostgreSQL", "Mulesoft", "Keycloak", "Elasticsearch", "Docker", "Nginx"]
   }
 ]

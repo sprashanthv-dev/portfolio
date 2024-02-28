@@ -1,7 +1,7 @@
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+} from 'react-vertical-timeline-component'; //TODO: Add the types package for timeline component
 import 'react-vertical-timeline-component/style.min.css';
 
 import { TimelineItem, TimelineParentConfig } from '../../interfaces';
@@ -19,11 +19,10 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
   const { animate, layout, lineColor, className } = attrs;
   const { data, uiConfig } = config;
 
-  // TODO: Having only two config's only now (even, odd), can be extended if needed later
-  const evenIdxConfig = uiConfig[0];
-  const oddIdxConfig = uiConfig[1];
+  // TODO: Future enhancement - ui config can accept array of configuration
+  // TODO: styles, one for each timeline element
+  const timelineItemConfig = uiConfig[0];
 
-  // TODO: Refactor the even / odd logic into a separate function instead of repetition
   return (
     <VerticalTimeline
       animate={animate}
@@ -31,33 +30,39 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
       lineColor={lineColor}
       className={className}
     >
-      {data.map((item, index) => (
-        <VerticalTimelineElement
-          key={item.id}
-          className={
-            index % 2 === 0 ? evenIdxConfig.className : oddIdxConfig.className
-          }
-          contentStyle={
-            index % 2 === 0
-              ? evenIdxConfig.contentStyle
-              : oddIdxConfig.contentStyle
-          }
-          contentArrowStyle={
-            index % 2 === 0
-              ? evenIdxConfig.contentArrowStyle
-              : oddIdxConfig.contentArrowStyle
-          }
-          iconStyle={
-            index % 2 === 0 ? evenIdxConfig.iconStyle : oddIdxConfig.iconStyle
-          }
-          date={item.period}
-        >
-          <h3 className="vertical-timeline-element-title">{item.title}</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            {item.subtitle}
-          </h4>
-          <p>{item.description}</p>
-        </VerticalTimelineElement>
+      {data.map((item) => (
+          <VerticalTimelineElement
+              key={item.id}
+              className={timelineItemConfig.className}
+              contentStyle={timelineItemConfig.contentStyle}
+              contentArrowStyle={timelineItemConfig.contentArrowStyle}
+              iconStyle={timelineItemConfig.iconStyle}
+          >
+            <div className="flex flex-col items-center text-center m-4 md:m-2 md:text-lg md:flex-row md:justify-between md:text-left">
+              <span className="font-bold my-2 md:my-0">{item.position}</span>
+              <span>{item.period}</span>
+            </div>
+            <div className="flex flex-col items-center  m-4 md:m-2 md:text-lg md:flex-row md:justify-between">
+            <span className="font-bold my-2 text-center md:my-0 md:text-left">
+              {item.org}
+            </span>
+              <span>{item.location}</span>
+            </div>
+            <ul className="flex m-4 flex-col">
+              {item.description.map((elt, index) => (
+                  <li key={index} className="text-lg list-disc text-justify my-2">
+                    {elt}
+                  </li>
+              ))}
+            </ul>
+            <ul className="flex my-4 flex-wrap justify-center md:justify-normal">
+              {item.skills.map((skill, index) => (
+                  <li key={index} className="text-lg w mx-2 my-1 border-l-4 border-skills-bg">
+                    <span className="mx-1">{skill}</span>
+                  </li>
+              ))}
+            </ul>
+          </VerticalTimelineElement>
       ))}
     </VerticalTimeline>
   );

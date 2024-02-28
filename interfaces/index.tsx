@@ -38,15 +38,18 @@ export type TimeLineUIConfig = {
   dateClassName?: string;
   icon?: string;
   iconClassName?: string;
-  iconStyle?: string;
+  iconStyle?: object;
 };
 
 export type TimelineFields = {
   id: string;
-  title: string;
-  subtitle: string;
-  description: string;
+  position: string;
   period: string;
+  org: string;
+  location: string;
+  subtitle: string;
+  description: string[];
+  skills: string[];
 };
 
 export type TimelineItem = {
