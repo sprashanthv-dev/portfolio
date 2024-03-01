@@ -25,13 +25,13 @@ const IndexPage = () => {
         <section className="my-4 md:my-0 mx-auto">
           <Intro />
         </section>
-        <section>
+        <section id="about">
           <About />
         </section>
-        <section>
+        <section id="education">
           <Education />
         </section>
-        <section className="work_ex">
+        <section id="experience" className="work_ex">
           <WorkEx />
         </section>
       </QueryClientProvider>
