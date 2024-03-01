@@ -12,22 +12,27 @@ export const navbarItems = [
   {
     id: '1',
     title: 'About',
+    navigation: '#about'
   },
   {
     id: '2',
-    title: 'Experience',
+    title: 'Education',
+    navigation: '#education'
   },
   {
     id: '3',
-    title: 'Education',
+    title: 'Experience',
+    navigation: '#experience'
   },
   {
     id: '4',
     title: 'Projects',
+    navigation: '#projects'
   },
   {
     id: '5',
     title: 'Interests',
+    navigation: '#interests'
   },
 ];
 

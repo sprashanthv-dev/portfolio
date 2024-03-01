@@ -10,13 +10,13 @@ const Profile = () => {
   return (
     <div className="py-2 md:py-14">
       <p className="text-center my-3 md:text-xl md:text-left">
-        Hi, Nice to meet you! I am
+        Hi, Nice to meet you!
       </p>
       <p className="text-3xl text-center md:text-6xl md:text-left">
-        Prashanth Srinivasan.
+          I am Prashanth Srinivasan.
       </p>
       <p className="my-4 md:text-2xl text-justify">
-        I am a full-stack engineer by trade, specializing in crafting clean,
+        A full-stack engineer by trade, specializing in crafting clean,
         accessible and highly-performant web applications.
       </p>
       <p className="my-6 md:text-2xl text-justify">
@@ -25,7 +25,11 @@ const Profile = () => {
         Colorado, Boulder.
       </p>
       <div className="flex items-center justify-between md:justify-start">
-        <button className="md:text-xl border-solid border-2 p-2 md:p-4 rounded border-navbar-hover hover:bg-navbar-text hover:text-white">
+        <button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded 
+        hover:scale-110 transform transition duration-y
+        ${theme.type === 'light' ? 'border-light-mode-dark-color' : 'border-dark-mode-alt-color'}
+        ${theme.type === 'light' ? 'hover:bg-light-mode-dark-color' : 'hover:bg-dark-mode-light-bg'}
+        ${theme.type === 'light' ? 'hover:text-white' : 'hover:text-black'}`}>
           Contact Me
         </button>
         <div className="flex mx-2 md:mx-4">
@@ -33,7 +37,7 @@ const Profile = () => {
             <a
               key={item.id}
               href={item.link}
-              className="mx-2 md:mx-3"
+              className="mx-2 md:mx-3 hover:scale-150 transform transition duration-y"
               target="_blank"
               rel="noopener noreferrer"
               title={item.title}
