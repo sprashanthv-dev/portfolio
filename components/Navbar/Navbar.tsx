@@ -22,7 +22,8 @@ const Navbar = () => {
             navbarItems.map((item) => (
               <li
                 key={item.id}
-                className="hover:underline underline-offset-8 decoration-4 "
+                className="hover:underline underline-offset-8 decoration-4
+                hover:scale-110 transform transition duration-y"
               >
                 {item.title}
               </li>
@@ -34,7 +35,7 @@ const Navbar = () => {
         <img
           src={`images/${theme.type}_mode.svg`}
           alt="Theme Mode Icon"
-          className="cursor-pointer"
+          className="cursor-pointer hover:scale-150 transform transition duration-y"
           onClick={toggleTheme}
         />
         {/* Theme Switcher Ends */}

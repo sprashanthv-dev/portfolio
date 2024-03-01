@@ -6,13 +6,13 @@ const Education = () => {
 
     return (
         <>
-            <p className={`text-xl text-center mb-4 md:text-left md:text-2xl border-b-4 border-solid
+            <p className={`text-xl mb-4 text-left md:text-2xl border-b-2 border-solid
             ${theme.type === 'light' ? 'border-light-mode-alt-color' : 'border-dark-mode-alt-color'}`}>
                Education
             </p>
             <div>
-                <div className="flex flex-col items-center justify-around md:flex-row p-5">
-                    <img className="object-contain mb-4 md:mb-0" src="images/cu-logo.png" alt="CU Boulder Logo"
+                <div className={`flex flex-col items-center justify-around md:flex-row p-5 border-4 rounded shadow-lg ${theme.type === 'light' ? "border-light-mode-dark-color" : 'border-dark-mode-light-bg'} m-5`}>
+                    <img className="mb-4 md:mb-0" src="images/cu-logo.png" alt="CU Boulder Logo"
                          width="96"/>
                     <div className="flex flex-col text-center md:block mx-5 px-5">
                         <p className="text-xl md:text-2xl">Master of Science (MS)</p>
@@ -22,8 +22,8 @@ const Education = () => {
                         <p className="text-xl">Aug 2022 - May 2024</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-around md:flex-row p-5">
-                    <img className="object-contain mb-4 md:mb-0" src="images/psg-logo.png" alt="PSG Tech Logo"
+                <div className={`flex flex-col items-center justify-around md:flex-row p-5 border-4 rounded shadow-lg ${theme.type === 'light' ? "border-light-mode-dark-color" : 'border-dark-mode-light-bg'} mx-5 my-10`}>
+                    <img className=" mb-4 md:mb-0" src="images/psg-logo.png" alt="PSG Tech Logo"
                          width="96"/>
                     <div className="flex flex-col text-center md:block mx-5 px-5">
                         <p className="text-xl md:text-2xl">Master of Science (MSc)</p>

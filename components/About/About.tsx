@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <div>
-      <p className={`text-xl text-center md:text-left md:text-2xl border-b-4 border-solid 
+      <p className={`text-xl text-left md:text-2xl border-b-2 border-solid 
       ${theme.type === 'light' ? 'border-light-mode-alt-color' : 'border-dark-mode-alt-color'}`}>
         About
       </p>
