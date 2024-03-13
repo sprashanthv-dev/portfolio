@@ -4,8 +4,9 @@ import {
 } from 'react-vertical-timeline-component'; //TODO: Add the types package for timeline component
 import 'react-vertical-timeline-component/style.min.css';
 
+import Skills from "../Skills/Skills";
+
 import { TimelineItem, TimelineParentConfig } from '../../interfaces';
-import {useTheme} from "../../context/ThemeContext";
 
 // TODO: Change the any type to a generic API Response interface
 
@@ -19,8 +20,6 @@ type timeLineProps = {
 const Timeline = ({ attrs, config }: timeLineProps) => {
   const { animate, layout, lineColor, className } = attrs;
   const { data, uiConfig } = config;
-
-  const { theme } = useTheme();
 
   // TODO: Future enhancement - ui config can accept array of configuration
   // TODO: styles, one for each timeline element
@@ -58,15 +57,7 @@ const Timeline = ({ attrs, config }: timeLineProps) => {
                   </li>
               ))}
             </ul>
-            <ul className="flex my-4 flex-wrap">
-              {item.skills.map((skill, index) => (
-                  <li key={index} className={`text-lg w mx-2 my-1 border-2 rounded-full 
-                  hover:scale-110 transform transition duration-y 
-                  ${theme.type === 'light' ? 'border-light-mode-alt-color' : 'border-dark-mode-dark-text'} `}>
-                    <span className="mx-1 p-2">{skill}</span>
-                  </li>
-              ))}
-            </ul>
+            <Skills skills={item.skills}/>
           </VerticalTimelineElement>
       ))}
     </VerticalTimeline>
