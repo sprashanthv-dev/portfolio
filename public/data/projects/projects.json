@@ -10,8 +10,8 @@
   {
     "id": 2,
     "title": "HTTP Proxy Server",
-    "description": "Designed and developed a multi-threaded HTTP proxy server using C that , parses and forwards the request to the intended HTTP server and relays the response. It supports the caching of requested web pages, reduces DNS look up times through hostname-ip address caching and IP blacklisting to block access to specified websites. Prefetching embedded links at the background improved the response times significantly.",
-    "skills": ["C", "Socket Programming", "TCP/IP", "Multithreading", "Make Utility"],
+    "description": "Designed and developed a multi-threaded HTTP proxy server using C that parses and forwards the request to the intended HTTP server and relays the response. It supports the caching of requested web pages, reduces DNS look up times through hostname-ip address caching and IP blacklisting to block access to specified websites. Prefetching embedded links at the background improved the response times significantly.",
+    "skills": ["C", "Socket Programming", "TCP/IP", "Multithreading"],
     "imageUrl": "images/proxy_server_thumbnail.jpg",
     "githubUrl": "https://github.com/sprashanthv-dev/http-proxy-server"
   },

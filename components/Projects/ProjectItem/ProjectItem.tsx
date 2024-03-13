@@ -14,13 +14,13 @@ const ProjectItem = ({ projectInfo }: Item) => {
   const { theme } = useTheme();
 
   return (
-    <div className="flex justify-between items-center">
-      <img src={projectInfo.imageUrl} className="max-w-md" alt={`${projectInfo.title} Thumbnail`} />
-      <div>
-        <p>{projectInfo.title}</p>
-        <p>{projectInfo.description}</p>
-        <Skills skills={projectInfo.skills} />
-        <div className="flex mx-2 md:mx-4">
+    <div className="flex flex-col items-center justify-between lg:items-stretch lg:flex-row mb-8">
+      <img src={projectInfo.imageUrl} className="w-96 md:w-full lg:w-96" alt={`${projectInfo.title} Thumbnail`} />
+      <div className="mt-4 lg:mt-0 lg:px-4">
+        <div className="flex items-center justify-between">
+          <p className="text-xl md:text-2xl hover:underline hover:cursor-pointer">
+            {projectInfo.title}
+          </p>
           {projectInfo.githubUrl ? (
             <a
               href={projectInfo.githubUrl}
@@ -50,6 +50,8 @@ const ProjectItem = ({ projectInfo }: Item) => {
             </a>
           ) : null}
         </div>
+        <p className="text-justify text-lg my-2">{projectInfo.description}</p>
+        <Skills skills={projectInfo.skills} />
       </div>
     </div>
   );
