@@ -1,21 +1,22 @@
-import React from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import Layout from 'components/Layout';
-import About from 'components/About/About';
-import Intro from '../components/Intro/Intro';
+import Layout from "components/Layout";
+import About from "components/About/About";
+import Intro from "../components/Intro/Intro";
 
-import WorkEx from '../components/WorkEx/WorkEx';
+import WorkEx from "../components/WorkEx/WorkEx";
 import Education from "../components/Education/Education";
+import Projects from "../components/Projects/Projects";
 
 // TODO: Move this config to a separate file
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,
-      cacheTime: Infinity,
-    },
-  },
+      cacheTime: Infinity
+    }
+  }
 });
 
 const IndexPage = () => {
@@ -33,6 +34,9 @@ const IndexPage = () => {
         </section>
         <section id="experience" className="work_ex">
           <WorkEx />
+        </section>
+        <section id="projects">
+          <Projects />
         </section>
       </QueryClientProvider>
     </Layout>
