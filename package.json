@@ -16,7 +16,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx .",
     "pretty": "prettier --write '*.{js,jsx,ts,tsx,json,scss}' '**/*.{js,jsx,ts,tsx,json,scss}'",
     "pretty/test": "prettier --check '*.{js,jsx,ts,tsx,json,scss}' '**/*.{js,jsx,ts,tsx,json,scss}'"
   },

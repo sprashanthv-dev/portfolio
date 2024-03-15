@@ -3,6 +3,8 @@ const path = require('path');
 require('dotenv').config();
 
 module.exports = {
+  basePath: "/portfolio",
+  output: "export",
   env: {
     API_URL: process.env.API_URL,
   },
