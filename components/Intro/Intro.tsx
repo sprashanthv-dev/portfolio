@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import { useTheme } from 'context/ThemeContext';
+import { useTheme } from "context/ThemeContext";
 
-import { socialIcons } from 'lib/constants';
+import { socialIcons } from "lib/constants";
 
 const Profile = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="py-2 md:py-14">
+    <div className="py-2 md:pt-14 pb-8">
       <p className="text-center my-3 md:text-xl md:text-left">
         Hi, Nice to meet you!
       </p>
       <p className="text-3xl text-center md:text-6xl md:text-left">
-          I am Prashanth Srinivasan.
+        I am Prashanth Srinivasan.
       </p>
       <p className="my-4 md:text-2xl text-justify">
         A full-stack engineer by trade, specializing in crafting clean,
@@ -24,14 +24,19 @@ const Profile = () => {
         focus on Software Systems and Cloud Computing at the University of
         Colorado, Boulder.
       </p>
-      <div className="flex items-center justify-between md:justify-start">
-        {/*<button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded */}
-        {/*hover:scale-110 transform transition duration-y*/}
-        {/*${theme.type === 'light' ? 'border-light-mode-dark-color' : 'border-dark-mode-alt-color'}*/}
-        {/*${theme.type === 'light' ? 'hover:bg-light-mode-dark-color' : 'hover:bg-dark-mode-light-bg'}*/}
-        {/*${theme.type === 'light' ? 'hover:text-white' : 'hover:text-black'}`}>*/}
-        {/*  Contact Me*/}
-        {/*</button>*/}
+      <div className="flex items-center justify-between">
+        {/*TODO: Same button to be replicated for navigation to contact form */}
+        {/*TODO: Change this button to a component */}
+        <a href="Prashanth_Srinivasan_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <button className={`md:text-xl border-solid border-2 p-3 rounded 
+        hover:scale-110 transform transition duration-y
+        ${theme.type === "light" ? "border-light-mode-dark-color" : "border-dark-mode-alt-color"}
+        ${theme.type === "light" ? "hover:bg-light-mode-dark-color" : "hover:bg-dark-mode-light-bg"}
+        ${theme.type === "light" ? "hover:text-white" : "hover:text-black"}`}>
+            Resume
+          </button>
+        </a>
+
         <div className="flex m">
           {socialIcons.map((item, index) => (
             <a

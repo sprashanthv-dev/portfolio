@@ -1,19 +1,18 @@
 {
-  "name": "nextjs-boilerplate-simple",
+  "name": "sprashanthv-portfolio-app",
   "version": "1.0.0",
-  "author": "Bruno Bernardino <me@brunobernardino.com>",
-  "license": "UNLICENSED",
+  "author": "Prashanth Srinivasan <prashanthvamanan3@gmail.com>",
+  "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrunoBernardino/nextjs-boilerplate-simple.git"
+    "url": "git+https://github.com/sprashanthv-dev/portfolio.git"
   },
   "engines": {
     "node": "18.x",
     "npm": "9.x"
   },
   "scripts": {
-    "test": "jest --testTimeout=5000",
     "dev": "next",
     "build": "next build",
     "start": "next start",
