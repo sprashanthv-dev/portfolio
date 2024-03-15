@@ -57,4 +57,16 @@ export const socialIcons = [
     alt: 'prashanthvamanan3@gmail.com',
     title: 'Email',
   },
+  {
+    id: '4',
+    label: 'blog',
+    link: 'https://dev.to/sprashanthv',
+    title: 'Blog',
+  },
+  {
+    id: '5',
+    label: 'game_dev',
+    link: 'https://simmer.io/@sprashanthv/',
+    title: 'Game Dev',
+  },
 ];
