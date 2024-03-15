@@ -56,3 +56,13 @@ export type TimelineItem = {
   data: TimelineFields[];
   uiConfig: TimeLineUIConfig[];
 };
+
+export type ProjectFields = {
+  id: string;
+  title: string;
+  description: string;
+  skills: string[]
+  imageUrl: string;
+  videoUrl?: string;
+  githubUrl?: string;
+}

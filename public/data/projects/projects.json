@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Network Extension (NetX)",
+    "description": "A mesh based wireless sensor network (WSN) that enables first responders accelerate their search and rescue efforts from several months to few days by deploying portable last-mile network access points with live observability metrics and troubleshooting capabilities.",
+    "skills": ["C++", "Raspberry Pi", "Prometheus", "Grafana", "Mesh Networking", "LoRA", "Wi-Fi"],
+    "imageUrl": "images/netx_map.png",
+    "videoUrl": "https://vimeo.com/824382005/142e753ada"
+  },
+  {
+    "id": 2,
+    "title": "HTTP Proxy Server",
+    "description": "Designed and developed a multi-threaded HTTP proxy server using C that parses and forwards the request to the intended HTTP server and relays the response. It supports the caching of requested web pages, reduces DNS look up times through hostname-ip address caching and IP blacklisting to block access to specified websites. Prefetching embedded links at the background improved the response times significantly.",
+    "skills": ["C", "Socket Programming", "TCP/IP", "Multithreading"],
+    "imageUrl": "images/proxy_server_thumbnail.jpg",
+    "githubUrl": "https://github.com/sprashanthv-dev/http-proxy-server"
+  },
+  {
+    "id": 3,
+    "title": "ASCII Attack",
+    "description": "Built an arcade 2D game inspired by the classic Arkanoid, where the player tries to destroy repeatedly spawned blocks using Python's pygame library. Implemented singleton, decorator, command and factory design patterns resulting in reusable, extensible and maintainable code.",
+    "skills": ["Python", "Design Patterns", "Object-Oriented Programming"],
+    "imageUrl": "images/ascii_attack_demo.gif",
+    "githubUrl": "https://github.com/sprashanthv-dev/ascii-attack"
+  }
+]

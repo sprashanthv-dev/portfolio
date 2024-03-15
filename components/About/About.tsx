@@ -1,8 +1,12 @@
 import {useTheme} from "../../context/ThemeContext";
+import { socialIcons } from "../../lib/constants";
 
 const About = () => {
 
   const { theme } = useTheme();
+
+  // TODO: Change this to a contact form later
+  const email = socialIcons.filter(icon => icon.label == 'email');
 
   return (
     <div>
@@ -41,12 +45,12 @@ const About = () => {
           <p className="text-justify">
             I am always looking forward towards new challenges and opportunities
             to learn and grow as a software engineer. Please feel free to
-            contact me using the{' '}
+            send me an email at
             {/*TODO: Add navigation to actual contact form */}
-            <a href="" className="hover:underline">
-              <strong>contact form </strong>
+            <a href={email[0].link}>
+              <strong> {email[0].alt} </strong>
             </a>
-            below for any work-related opportunities.
+             for any work-related opportunities.
           </p>
         </div>
       </div>
