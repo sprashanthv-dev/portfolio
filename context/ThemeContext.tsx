@@ -1,30 +1,37 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { ITheme, ThemeContextType, ThemeProviderProps } from '../interfaces';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { ITheme, ThemeContextType, ThemeProviderProps } from "../interfaces";
 
 export const ThemeContext = createContext<ThemeContextType | undefined>(
-  undefined,
+  undefined
 );
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<ITheme>({ type: 'light' });
+  const [theme, setTheme] = useState<ITheme>(
+    { type: "light" });
+
   useEffect(() => {
-    const initialTheme = localStorage.getItem('theme') != null ? localStorage.getItem('theme') : 'light';
+
+    const initialTheme = localStorage.getItem("theme") != null
+      ? localStorage.getItem("theme")
+      : "light";
+
     setTheme({ type: initialTheme });
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', theme.type);
+    const currentTheme = theme.type != null ? theme.type : "light";
+    localStorage.setItem("theme", currentTheme);
   }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prevState) => {
-      if (prevState.type === 'dark') {
-        return { type: 'light' };
+      if (prevState.type === "dark") {
+        return { type: "light" };
       }
 
-      return { type: 'dark' };
+      return { type: "dark" };
     });
   };
 
