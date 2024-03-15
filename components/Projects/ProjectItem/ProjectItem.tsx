@@ -14,10 +14,10 @@ const ProjectItem = ({ projectInfo }: Item) => {
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col items-center justify-between lg:items-stretch lg:flex-row mb-8">
-      <img src={projectInfo.imageUrl} className="w-96 md:w-full lg:w-96" alt={`${projectInfo.title} Thumbnail`} />
+    <div className="flex flex-col items-center justify-between lg:flex-row mb-8">
+      <img src={projectInfo.imageUrl} className="w-96 md:w-full lg:w-96 mb-auto" alt={`${projectInfo.title} Thumbnail`} />
       <div className="mt-4 lg:mt-0 lg:px-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <p className="text-xl md:text-2xl hover:underline hover:cursor-pointer">
             {projectInfo.title}
           </p>

@@ -25,19 +25,19 @@ const Profile = () => {
         Colorado, Boulder.
       </p>
       <div className="flex items-center justify-between md:justify-start">
-        <button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded 
-        hover:scale-110 transform transition duration-y
-        ${theme.type === 'light' ? 'border-light-mode-dark-color' : 'border-dark-mode-alt-color'}
-        ${theme.type === 'light' ? 'hover:bg-light-mode-dark-color' : 'hover:bg-dark-mode-light-bg'}
-        ${theme.type === 'light' ? 'hover:text-white' : 'hover:text-black'}`}>
-          Contact Me
-        </button>
-        <div className="flex mx-2 md:mx-4">
-          {socialIcons.map((item) => (
+        {/*<button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded */}
+        {/*hover:scale-110 transform transition duration-y*/}
+        {/*${theme.type === 'light' ? 'border-light-mode-dark-color' : 'border-dark-mode-alt-color'}*/}
+        {/*${theme.type === 'light' ? 'hover:bg-light-mode-dark-color' : 'hover:bg-dark-mode-light-bg'}*/}
+        {/*${theme.type === 'light' ? 'hover:text-white' : 'hover:text-black'}`}>*/}
+        {/*  Contact Me*/}
+        {/*</button>*/}
+        <div className="flex m">
+          {socialIcons.map((item, index) => (
             <a
               key={item.id}
               href={item.link}
-              className="mx-2 md:mx-3 hover:scale-150 transform transition duration-y"
+              className={`${index !== 0 ? "mx-2 md:mx-3" : "mr-2"} hover:scale-150 transform transition duration-y`}
               target="_blank"
               rel="noopener noreferrer"
               title={item.title}

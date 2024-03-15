@@ -29,11 +29,12 @@ export const navbarItems = [
     title: 'Projects',
     navigation: '#projects'
   },
-  {
-    id: '5',
-    title: 'Interests',
-    navigation: '#interests'
-  },
+  // TODO: Add Game Dev Projects and Blog under interests
+  // {
+  //   id: '5',
+  //   title: 'Interests',
+  //   navigation: '#interests'
+  // },
 ];
 
 export const socialIcons = [
@@ -51,8 +52,9 @@ export const socialIcons = [
   },
   {
     id: '3',
-    label: 'mail',
-    link: 'mailto:sprashanthv.dev@gmail.com',
-    title: 'Mail',
+    label: 'email',
+    link: 'mailto:prashanthvamanan3@gmail.com',
+    alt: 'prashanthvamanan3@gmail.com',
+    title: 'Email',
   },
 ];
