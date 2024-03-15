@@ -28,7 +28,7 @@ const Profile = () => {
         {/*TODO: Same button to be replicated for navigation to contact form */}
         {/*TODO: Change this button to a component */}
         <a href="Prashanth_Srinivasan_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <button className={`md:text-xl border-solid border-2 p-2 md:p-4 rounded 
+          <button className={`md:text-xl border-solid border-2 p-3 rounded 
         hover:scale-110 transform transition duration-y
         ${theme.type === "light" ? "border-light-mode-dark-color" : "border-dark-mode-alt-color"}
         ${theme.type === "light" ? "hover:bg-light-mode-dark-color" : "hover:bg-dark-mode-light-bg"}
